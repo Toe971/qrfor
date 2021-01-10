@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
 import Form from 'react-bootstrap/Form'
-import ReactQRScanner from './components/ReactQRScanner/ReactQRScanner'
 import Nav from './Nav';
 import Generator from './Generator';
+import Scanner from './Scanner';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 // notice that Home is not using {} but ()
@@ -11,11 +11,6 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 const Home = () => (
   <div>
     <h1>Home</h1>
-        {/* reader-container is used for styling, to force reader
-      to be at the center */}
-    <div className="reader-container">
-        <ReactQRScanner />
-    </div>
   </div>
 )
 
@@ -28,6 +23,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/generator" component={Generator} />
+          <Route path="/scanner" component={Scanner} />
         </Switch>
         <Form>
             <Form.Group>

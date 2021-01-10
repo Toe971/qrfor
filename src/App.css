@@ -6,6 +6,9 @@ html {
   text-align: center;
 }
 
+/* "reader-container" is used to center "reader" 
+otherwise by default the scanner will be at the left side
+*/
 .reader-container {
   display: flex;
   align-items: center;
@@ -21,6 +24,14 @@ nav {
   color: white;
 }
 
+
+/* text-decoration: none does not work when put here
+ Not exactly sure why but maybe is because <Link> is wrapping the <li>?
+ so need to use inline styles instead
+
+ below values are used to position the <Link> which wraps the <li>s
+ the actual styling for the <li> only can be found in Nav.js via inline styles
+ */
 .nav-links {
   width: 40%;
   display: flex;
@@ -28,3 +39,4 @@ nav {
   align-items: center;
   list-style: none;
 }
+

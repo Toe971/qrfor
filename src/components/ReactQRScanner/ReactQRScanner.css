@@ -6,6 +6,11 @@ p {
   make the text wrap */
 }
 
+/* below is for styling of scanner
+mainly is just to confine the stupid thing in a fixed width
+there is reader-container styling in App.css to center 
+the reader div wrapping this
+*/
 .reader {
   display: flex;
   flex-direction: column;
