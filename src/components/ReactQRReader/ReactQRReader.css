@@ -1,0 +1,15 @@
+p {
+  font-family: "Segoe Ui";
+  width: 60vw;
+  word-wrap: break-word;
+  /* by setting width and using word-wrap, we can 
+  make the text wrap */
+}
+
+.reader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+}
