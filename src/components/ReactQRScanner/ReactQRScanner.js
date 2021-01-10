@@ -1,8 +1,8 @@
 import React, { useState, useEffect} from 'react'
 import QrReader from 'react-qr-reader'
-import './ReactQRReader.css';
+import './ReactQRScanner.css';
 
-export function ReactQRReader() {
+function ReactQRScanner() {
   const [qrString, setQrString] = useState("Waiting for QR code...");
 
 
@@ -34,4 +34,6 @@ export function ReactQRReader() {
   )
 
 }
+
+export default ReactQRScanner;
 
