@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import QRCode from 'qrcode.react';
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from 'uuid'; 
 
 
 function ReactQRMaker() {
@@ -12,6 +12,7 @@ function ReactQRMaker() {
     }
     const testObjectJSON = JSON.stringify(testObject)
     const [report, setReport] = useState({});
+    
 
     return(
         <QRCode 
