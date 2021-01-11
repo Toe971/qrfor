@@ -22,7 +22,7 @@ function ReactQRScanner() {
   
   /* pass qrStringValidator to handleScan */
   /* so onScan we can validate the qrString */
-  const qrStringValidatorAndSetReportState = (qrString) => {
+  /* const qrStringValidatorAndSetReportState = (qrString) => {
     const boolQrStringIsJSON = typeof JSON.parse(qrString) === "object";
     if (boolQrStringIsJSON) {
       setReport(
@@ -33,7 +33,7 @@ function ReactQRScanner() {
        }
       )
     }
-  }
+  } */
 
 
 
@@ -54,7 +54,7 @@ function ReactQRScanner() {
       // pass in qrString to de-JSONify it
       // still does not work for qrStringValidator, not sure if problem is with the function itself 
       // or calling two different setStates
-      qrStringValidatorAndSetReportState(qrString);
+      /* qrStringValidatorAndSetReportState(qrString); */
     }
   }
 
