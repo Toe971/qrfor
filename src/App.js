@@ -25,11 +25,11 @@ function App() {
           <Route path="/generator" component={Generator} />
           <Route path="/scanner" component={Scanner} />
         </Switch>
-        <Form>
+        {/* <Form>
             <Form.Group>
               <Form.File id="form-file" custom/>
             </Form.Group>
-        </Form>
+        </Form> */}
       </div>
     </Router>
   );
