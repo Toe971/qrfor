@@ -22,21 +22,30 @@ function ReactQRScanner() {
   
   /* pass qrStringValidator to handleScan */
   /* so onScan we can validate the qrString */
-  /* const qrStringValidatorAndSetReportState = (qrString) => {
-    const boolQrStringIsJSON = typeof JSON.parse(qrString) === "object";
-    if (boolQrStringIsJSON) {
-      setReport(
-       {
-        id: uuidv4(),
-        component: qrString.component,
-        fault: qrString.fault,
-       }
-      )
+  const qrStringValidatorAndSetReportState = (qrString) => {
+    try {
+      const boolQrStringIsJSON = typeof (JSON.parse(qrString)) === "object";
+      if (boolQrStringIsJSON) {
+        let parsedQrString = JSON.parse(qrString)
+        setReport(
+         {
+          id: uuidv4(),
+          component: parsedQrString.component,
+          system: parsedQrString.system
+         }
+        )
+      }
+      setDebug(`now in qrStringValidator if block, report: ${report}`)
     }
-  } */
+    catch {
+        console.log("Not the component that we want.")
+    }
+  }
 
 
 
+  // debug function similar to console.log() using this for mobile
+  const [debug, setDebug] = useState("not debug")
 
   /* handleScan and handleError are used for QrReader */
   /* qrString  */
@@ -54,7 +63,9 @@ function ReactQRScanner() {
       // pass in qrString to de-JSONify it
       // still does not work for qrStringValidator, not sure if problem is with the function itself 
       // or calling two different setStates
-      /* qrStringValidatorAndSetReportState(qrString); */
+      // edit: problem is resolved, see my OneNote
+      setDebug("data is received in handleScan")
+      qrStringValidatorAndSetReportState(qrString);
     }
   }
 
@@ -71,11 +82,16 @@ function ReactQRScanner() {
         style={{ width: '100%' }}
         facingMode={"environment"}
       />
-      {report.length > 0 &&
+      {Object.keys(report).length > 0 &&
       <p className="result">
         Component: {report.component}
       </p>}
-      <p className="result">{qrString}</p>
+      <p className="result">
+        System: {report.system}
+      </p>}
+      {/* <p className="result">{qrString}</p> */}
+      {/* qrString is the JSON.stringfy() form of the component */}
+      <p>{debug}</p>
     </div>
   )
 

@@ -8,7 +8,7 @@ function ReactQRMaker() {
     const testObject = {
         id: uuidv4(),
         component: "PlayStation",
-        fault: "kena fucked"
+        system: "S1"
     }
     const testObjectJSON = JSON.stringify(testObject)
     const [report, setReport] = useState({});
