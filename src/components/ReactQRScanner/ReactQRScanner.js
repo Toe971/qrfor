@@ -26,6 +26,8 @@ function ReactQRScanner() {
     try {
       const boolQrStringIsJSON = typeof (JSON.parse(qrString)) === "object";
       if (boolQrStringIsJSON) {
+        // previously used JSON.parse(qrString), but did not save to variable. See initial commits to understand more
+        // this resulted in data not being shown when i want to
         let parsedQrString = JSON.parse(qrString)
         setReport(
          {
@@ -35,10 +37,10 @@ function ReactQRScanner() {
          }
         )
       }
-      setDebug(`now in qrStringValidator if block, report: ${report}`)
+      setDebug(`Now in qrStringValidator if block, Report: ${report}`)
     }
     catch {
-        console.log("Not the component that we want.")
+      setDebug(`Not a system component, item scanned is: ${qrString}`)
     }
   }
 
@@ -48,7 +50,6 @@ function ReactQRScanner() {
   const [debug, setDebug] = useState("not debug")
 
   /* handleScan and handleError are used for QrReader */
-  /* qrString  */
   const [qrString, setQrString] = useState("Waiting for QR code...");
 
   useEffect(() => {
@@ -88,7 +89,7 @@ function ReactQRScanner() {
       </p>}
       <p className="result">
         System: {report.system}
-      </p>}
+      </p>
       {/* <p className="result">{qrString}</p> */}
       {/* qrString is the JSON.stringfy() form of the component */}
       <p>{debug}</p>
