@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import Form from 'react-bootstrap/Form'
 import Nav from './Nav';
 import Generator from './Generator';
 import Scanner from './Scanner';
@@ -25,11 +24,6 @@ function App() {
           <Route path="/generator" component={Generator} />
           <Route path="/scanner" component={Scanner} />
         </Switch>
-        {/* <Form>
-            <Form.Group>
-              <Form.File id="form-file" custom/>
-            </Form.Group>
-        </Form> */}
       </div>
     </Router>
   );

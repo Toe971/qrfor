@@ -18,8 +18,6 @@ function ReactQRScanner() {
         fault: "", */
       }
     );
-    
-  
   /* pass qrStringValidator to handleScan */
   /* so onScan we can validate the qrString */
   const qrStringValidatorAndSetReportState = (qrString) => {
