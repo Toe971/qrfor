@@ -1,3 +1,27 @@
 .logo {
   letter-spacing: 0.5ch;
 }
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  background: rgb(37, 77, 97);
+  color: white;
+}
+
+/* text-decoration: none does not work when put here
+   Not exactly sure why but maybe is because <Link> is wrapping the <li>?
+   so need to use inline styles instead
+  
+   below values are used to position the <Link> which wraps the <li>s
+   the actual styling for the <li> only can be found in Nav.js via inline styles
+   */
+.nav-links {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}

@@ -43,6 +43,7 @@ function ReportFormComponent() {
     }
 
     // I should hardcode the components in a tree view in the future
+    /* for now I should use a Bootstrap Form combined with the buttons etc. */
     return(
         <>
             {/* for input type text, value is the initial value of the input */}
