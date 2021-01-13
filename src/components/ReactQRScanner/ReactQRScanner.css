@@ -18,3 +18,7 @@ the reader div wrapping this
   justify-content: center;
   width: 400px;
 }
+
+.DropdownButton {
+  color: red;
+}

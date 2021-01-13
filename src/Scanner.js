@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import ReactQRScanner from './components/ReactQRScanner/ReactQRScanner'
 
 
