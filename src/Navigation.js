@@ -1,5 +1,5 @@
 import React from 'react';
-import './Nav.css';
+import './Navigation.css';
 import { Link } from 'react-router-dom';
 import { FaQrcode } from 'react-icons/fa'
 import { RiQrScan2Line } from 'react-icons/ri'
@@ -12,7 +12,7 @@ import { AiOutlineForm } from "react-icons/ai";
 links are shown as gray color etc. */
 
 
-function Nav() {
+function Navigation() {
 
   /* inline styles are used because the <Link> is wrapping the <li> */
   const navStyle = {
@@ -44,4 +44,4 @@ function Nav() {
     );
 }
 
-export default Nav;
+export default Navigation;

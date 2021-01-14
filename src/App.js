@@ -3,7 +3,7 @@ import React from 'react';
 // import ABOVE App.css, not underneath it, otherwise the CSS breaks
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import Nav from './Nav';
+import Navigation from './Navigation';
 import Generator from './Generator';
 import Scanner from './Scanner';
 import ReportForm from './ReportForm';
@@ -22,7 +22,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Nav />
+        <Navigation />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/generator" component={Generator} />
