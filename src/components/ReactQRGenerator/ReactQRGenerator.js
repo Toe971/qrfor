@@ -19,12 +19,12 @@ function ReactQRMaker() {
 
     
     return(
-        <>
+        <div className="generator">
             <QRCode 
                 value={testObjectJSON}
                 size={256}
             />
-        </>
+        </div>
     )
 }
 

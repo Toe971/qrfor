@@ -5,16 +5,23 @@ html {
 /* text-align center is responsible for most of the text aligning right now,
 need to change to individual component centering */
 .App {
-  text-align: center;
+  /* text-align: center; */
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* "reader-container" is used to center "reader" 
 otherwise by default the scanner will be at the left side
 */
-.reader-container {
+/* remove text-align center, going to redo all the css */
+/* .scanner-container {
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
 
 

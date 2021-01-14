@@ -1,5 +1,6 @@
 .logo {
   letter-spacing: 0.5ch;
+  font-size: 0.8rem;
 }
 
 nav {
@@ -19,7 +20,7 @@ nav {
    the actual styling for the <li> only can be found in Nav.js via inline styles
    */
 .nav-links {
-  width: 40%;
+  width: 50%;
   display: flex;
   justify-content: space-around;
   align-items: center;

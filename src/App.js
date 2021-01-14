@@ -13,7 +13,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 // this is the syntax used for Route component
 const Home = () => (
   <div>
-    <h1>Home</h1>
+    <h1 className="home">Home</h1>
   </div>
 )
 

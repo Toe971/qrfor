@@ -1,12 +1,12 @@
 import React from 'react';
-import './App.css';
+import './Generator.css';
 import ReactQRGenerator from './components/ReactQRGenerator/ReactQRGenerator'
 
 function Generator() {
     return (
-      <div className="App">
+      <div className="generator-container">
         <h1>Generator</h1>
-          <ReactQRGenerator />
+        <ReactQRGenerator />
       </div>
     );
 }

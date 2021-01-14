@@ -73,7 +73,7 @@ function ReactQRScanner() {
   }
 
   return (
-    <div className="reader">
+    <div className="scanner">
       <QrReader
         delay={300}
         onError={handleError}
@@ -81,13 +81,17 @@ function ReactQRScanner() {
         style={{ width: '100%' }}
         facingMode={"environment"}
       />
-      {Object.keys(report).length > 0 &&
-      <p className="result">
-        Component: {report.component}
-      </p>}
-      <p className="result">
-        System: {report.system}
-      </p>
+      {Object.keys(report).length > 0 
+        &&
+        <p className="result">
+          Component: {report.component}
+        </p> 
+        &&
+        <p className="result">
+          System: {report.system}
+        </p>
+      }
+      
       {/* <p className="result">{qrString}</p> */}
       {/* qrString is the JSON.stringfy() form of the component */}
       <p>{debug}</p>

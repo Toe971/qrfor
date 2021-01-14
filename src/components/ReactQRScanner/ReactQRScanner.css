@@ -1,7 +1,7 @@
-p {
+.scanner p {
   font-family: "Segoe Ui";
-  width: 60vw;
   word-wrap: break-word;
+  /* width is inherited from .scanner */
   /* by setting width and using word-wrap, we can 
   make the text wrap */
 }
@@ -11,14 +11,11 @@ mainly is just to confine the stupid thing in a fixed width
 there is reader-container styling in App.css to center 
 the reader div wrapping this
 */
-.reader {
+.scanner {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 400px;
-}
-
-.DropdownButton {
-  color: red;
+  margin: 1rem 0 0 0;
 }

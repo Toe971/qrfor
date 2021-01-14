@@ -26,17 +26,17 @@ function Nav() {
           <ul className="nav-links">
             <Link style={navStyle} to="/scanner"> 
               <li>
-                <FaQrcode size="3em" />
+                <FaQrcode size="2em" />
               </li>
             </Link>
             <Link style={navStyle} to="/generator">
               <li>
-                <RiQrScan2Line size="3.4em" />
+                <RiQrScan2Line size="2.4em" />
               </li>
             </Link>
             <Link style={navStyle} to="/form">
               <li>
-                <AiOutlineForm size="3.4em" />
+                <AiOutlineForm size="2.4em" />
               </li>
             </Link>
           </ul>
