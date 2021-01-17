@@ -12,6 +12,7 @@ nav {
   color: white;
 }
 
+
 /* text-decoration: none does not work when put here
    Not exactly sure why but maybe is because <Link> is wrapping the <li>?
    so need to use inline styles instead
@@ -26,3 +27,5 @@ nav {
   align-items: center;
   list-style: none;
 }
+
+

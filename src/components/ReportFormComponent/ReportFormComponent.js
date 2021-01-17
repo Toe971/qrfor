@@ -11,6 +11,28 @@ import Container from 'react-bootstrap/Container'
 import Card from 'react-bootstrap/Card'
 
 function ReportFormComponent() {
+
+    const [component, setComponent] = useState("")
+    const handleComponent = (event) => {
+        setComponent(event.target.value)
+        console.log("From handleComponent ", component)
+    }
+
+    const [fault, setFault] = useState("")
+    const handleFault = (event) => {
+        setFault(event.target.value)
+        console.log("From handleFault ", fault)
+    }
+
+    const [system, setSystem] = useState("")
+    const handleSystem = (event) => {
+        setSystem(event.target.value)
+        console.log("From handleSystem ", system)
+    }
+
+    // pass into dependency array each input's state
+
+    // initialise report state
     const [report, setReport] = useState(
         {
             component: "",
@@ -19,34 +41,28 @@ function ReportFormComponent() {
         }
     ); 
 
-    // set report as text that user has entered
+    
     const handleSubmitReport= (event) => {
         event.preventDefault();
+        console.log(report.component, report.system, report.fault)
+    }
+
+    // set dependency array as component, system, fault, so if any of these state changes
+    // set report as text that user has entered
+    // previously I used setReport inside handleSubmitReport
+    // this resulted in old state being submitted on the first submit
+    // only on the second submit will then the correct state be submitted
+    // then I read from documentation:
+    // 
+    useEffect(() => {
         setReport(
             {
                 component: component,
                 system: system,
                 fault: fault
             }
-
         );
-        console.log(report.component, report.system, report.fault)
-    }
-
-    const [component, setComponent] = useState("")
-    const handleComponent = (event) => {
-        setComponent(event.target.value)
-    }
-
-    const [fault, setFault] = useState("")
-    const handleFault = (event) => {
-        setFault(event.target.value)
-    }
-
-    const [system, setSystem] = useState("")
-    const handleSystem = (event) => {
-        setSystem(event.target.value)
-    }
+    }, [component, system, fault])
 
     // I should hardcode the components in a tree view in the future
     /* for now I should use a Bootstrap Form combined with the buttons etc. */
@@ -80,7 +96,12 @@ function ReportFormComponent() {
                     Component
                     </Form.Label>
                     <Col sm={10}>
-                        <Form.Control type="text" placeholder="Enter Component" value={component} onChange={handleComponent}/>
+                        <Form.Control 
+                            type="text" 
+                            placeholder="Enter Component" 
+                            value={component} 
+                            onChange={handleComponent}
+                        />
                     </Col>
                 </Form.Group>
 
@@ -89,7 +110,12 @@ function ReportFormComponent() {
                     Fault
                     </Form.Label>
                     <Col sm={10}>
-                        <Form.Control as="textarea" placeholder="Fault Description" value={fault} onChange={handleFault}/>
+                        <Form.Control 
+                            as="textarea" 
+                            placeholder="Fault Description" 
+                            value={fault} 
+                            onChange={handleFault}
+                        />
                     </Col>
                 </Form.Group>
                 <Form.Group as={Row} className='mt-3'>
@@ -97,11 +123,15 @@ function ReportFormComponent() {
                         System
                     </Form.Label>
                     <Col sm={10}>
-                        <Form.Control as="select" defaultValue="Choose...">
+                        <Form.Control 
+                            as="select" 
+                            onChange={handleSystem} 
+                            defaultValue="Choose..."
+                        >
                             <option>Choose...</option>
                             {
                                 [1, 2, 3, 4].map(element => {
-                                    return <option eventKey={element}>System {element}</option>
+                                    return <option eventKey={element} value={`System ${element}`}>System {element}</option>
                                 })
                             }
                         </Form.Control>

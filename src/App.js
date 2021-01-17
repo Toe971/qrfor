@@ -7,6 +7,7 @@ import Navigation from './Navigation';
 import Generator from './Generator';
 import Scanner from './Scanner';
 import ReportForm from './ReportForm';
+import CardsContainer from './CardsContainer'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 // notice that Home is not using {} but ()
@@ -28,6 +29,7 @@ function App() {
           <Route path="/generator" component={Generator} />
           <Route path="/scanner" component={Scanner} />
           <Route path="/form" component={ReportForm} />
+          <Route path="/cardscontainer" component={CardsContainer} />
         </Switch>
       </div>
     </Router>
