@@ -1,31 +1,30 @@
 # React QR From Submitter (WIP)
 
-Netlify deployed link: [https://naughty-mcnulty-e2ca77.netlify.app/](https://naughty-mcnulty-e2ca77.netlify.app/)
+Netlify deployed link: [https://naughty-mcnulty-e2ca77.netlify.app/](https://naughty-mcnulty-e2ca77.netlify.app/)\
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Purpose
 
-In the project directory, you can run:
+To submit a form to a your IT support department or technician to
+inform him/her/they of the faulty part in question and description
+of the fault.
 
-### `npm start`
+## How it works
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Point the camera in your mobile device to scan a QR code that is pasted onto your component, which will lead to a form submission page
+where you can fill in your details. And then submit!
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## WIP
 
-### `npm test`
+So far, most of the functionality is not out yet... Just the front-end interface. If only a day has more than 24 hours...
+Looking to port over to React Native as it has easier access into mobile device camera.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## To-do list
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [ ] Select type of camera (e.g. some devices have 3 back cameras)
+- [x] Basic Front End interface
+- [x] Bootstrap Form!
+- [x] Trying out Github Markdown syntax
+- [x] Deploying to Netlify
+- [ ] Link to database (MongoDB etc.)
+- [ ] And many more!
